@@ -6,7 +6,7 @@
 int main() {
 
 Juego LastShine;
-LastShine.run();
+//LastShine.run();
 
     return 0;
 }

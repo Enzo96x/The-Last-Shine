@@ -49,6 +49,10 @@
 		</Linker>
 		<Unit filename="Androide.cpp" />
 		<Unit filename="Androide.h" />
+		<Unit filename="Colisionable.cpp" />
+		<Unit filename="Colisionable.h" />
+		<Unit filename="Disparo.cpp" />
+		<Unit filename="Disparo.h" />
 		<Unit filename="Juego.cpp" />
 		<Unit filename="Juego.h" />
 		<Unit filename="Personaje.cpp" />

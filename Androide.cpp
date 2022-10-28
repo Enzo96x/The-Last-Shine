@@ -34,6 +34,12 @@ void Androide::Update() {
             teclaAnimacion=4;
         }
 
+            /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)&&teclaAnimacion!=5) {
+            _disparo=true;
+            bala.disparar(x_coord, y_coord,_animacion);
+            teclaAnimacion=5;
+        }*/
+
 
     _frame+=0.2;
     if(_frame>=4) {
@@ -64,6 +70,10 @@ void Androide::Update() {
 void Androide::draw(sf::RenderTarget& target,sf::RenderStates states)const {
 
     target.draw(AndroideSprite, states);
+}
+
+sf::FloatRect Androide::getBounds() const{
+return AndroideSprite.getGlobalBounds();
 }
 
 

@@ -2,8 +2,10 @@
 #define ANDROIDE_H_INCLUDED
 #include <SFML/Graphics.hpp>
 #include "Personaje.h"
+#include "Colisionable.h"
 
-class Androide : public Personaje , public sf::Drawable{
+
+class Androide : public Personaje , public Colisionable, public sf::Drawable{
 private:
     sf::Texture AndroideTextura;
     sf::Sprite AndroideSprite;
@@ -13,6 +15,7 @@ public:
     Androide();
     void Update();
     void draw(sf::RenderTarget& target,sf::RenderStates states) const override;
+    sf::FloatRect getBounds() const override;
 };
 
 

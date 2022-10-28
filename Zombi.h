@@ -2,8 +2,9 @@
 #define ZOMBI_H_INCLUDED
 #include <SFML/Graphics.hpp>
 #include "Personaje.h"
+#include "Colisionable.h"
 
-class Zombie: public Personaje , public sf::Drawable{
+class Zombie: public Personaje , public Colisionable, public sf::Drawable{
 
 private:
     sf::Texture ZombieTextura;
@@ -15,6 +16,7 @@ public:
     Zombie();
     void Update();
     void draw(sf::RenderTarget& target,sf::RenderStates states) const override;
+    sf::FloatRect getBounds() const override;
 };
 
 

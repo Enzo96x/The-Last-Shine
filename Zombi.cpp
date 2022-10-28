@@ -65,7 +65,6 @@ Zombie::Zombie() {
     }
 
 
-
 }
 
 
@@ -110,3 +109,6 @@ void Zombie::draw(sf::RenderTarget& target,sf::RenderStates states)const {
     target.draw(ZombieSprite, states);
 }
 
+sf::FloatRect Zombie::getBounds() const{
+return ZombieSprite.getGlobalBounds();
+}
