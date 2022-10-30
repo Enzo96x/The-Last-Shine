@@ -50,16 +50,16 @@ void Androide::Update() {
 
     switch (_animacion) {
     case 1:
-        AndroideSprite.setTextureRect(sf::IntRect(0+int(_frame)*136,272,120,120));
+        AndroideSprite.setTextureRect(sf::IntRect(int(_frame)*136,272,120,120));
         break;
     case 2:
-        AndroideSprite.setTextureRect(sf::IntRect(0+int(_frame)*136,408,120,120));
+        AndroideSprite.setTextureRect(sf::IntRect(int(_frame)*136,408,120,120));
         break;
     case 3:
-        AndroideSprite.setTextureRect(sf::IntRect(0+int(_frame)*136,0,120,120));
+        AndroideSprite.setTextureRect(sf::IntRect(int(_frame)*136,0,120,120));
         break;
     case 4:
-        AndroideSprite.setTextureRect(sf::IntRect(0+int(_frame)*136,136,120,120));
+        AndroideSprite.setTextureRect(sf::IntRect(int(_frame)*136,136,120,120));
         break;
     case 5:
         break;

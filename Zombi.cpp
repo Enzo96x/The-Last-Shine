@@ -63,11 +63,7 @@ Zombie::Zombie() {
         _animacion=4;
         break;
     }
-
-
 }
-
-
 
 
 void Zombie::Update() {

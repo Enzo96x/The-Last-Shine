@@ -3,7 +3,7 @@
 
 Juego::Juego() {
     init();
-    menu();
+    // menu();
 }
 
 void Juego::init() {
@@ -21,7 +21,6 @@ void Juego::init() {
     SpriteBackgroundEfecto.setTexture(TexturaBackgroundEfecto);
     SpriteBackgroundEfecto.setOrigin(635,635);
     SpriteBackgroundEfecto.setPosition(500,400);
-
 }
 
 void Juego::run() {
@@ -46,15 +45,33 @@ void Juego::draw() {
     window.clear();
     window.draw(SpriteBackground);
     window.draw(_Protagonista);
-    window.draw(zombie);
-    SpriteBackgroundEfecto.setRotation(SpriteBackgroundEfecto.getRotation()+0.1);
-    window.draw(SpriteBackgroundEfecto);
+
+    _frame+=0.2;
+    if(_frame>=10) {
+        GenerarZombies();
+        _frame=0;
+    }
+
+    //GenerarZombies();
+
+
+    for (const Zombie& z : listaZombies) {
+        window.draw(z);
+    }
+
+
+    //SpriteBackgroundEfecto.setRotation(SpriteBackgroundEfecto.getRotation()+0.1);
+    //window.draw(SpriteBackgroundEfecto);
     window.display();
 }
 
 void Juego::update() {
     _Protagonista.Update();
-    zombie.Update();
+
+    for ( Zombie& z : listaZombies) {
+        z.Update();
+    }
+
 }
 
 int Juego::menu() {
@@ -70,57 +87,59 @@ int Juego::menu() {
 
         window.draw(SpriteMenu);
 
-        SpriteBotonMenu.setTextureRect(sf::IntRect(0,0,380,70));
-        SpriteBotonMenu.setPosition(x, y);
+        /*SpriteBotonMenu.setTextureRect(sf::IntRect(0,0,380,70));
+        SpriteBotonMenu.setPosition(50, 360);
         window.draw(SpriteBotonMenu);
 
         SpriteBotonMenu.setTextureRect(sf::IntRect(0,75,380,70));
-        SpriteBotonMenu.setPosition(x, y+=100);
+        SpriteBotonMenu.setPosition(50, 460);
         window.draw(SpriteBotonMenu);
 
         SpriteBotonMenu.setTextureRect(sf::IntRect(0,150,380,70));
-        SpriteBotonMenu.setPosition(x, y+=100);
-        window.draw(SpriteBotonMenu);
+        SpriteBotonMenu.setPosition(50, 560);
+        window.draw(SpriteBotonMenu);*/
 
         SpriteBotonMenu.setTextureRect(sf::IntRect(385,0,380,70));
-        SpriteBotonMenu.setPosition(x, y-=200);
+        SpriteBotonMenu.setPosition(x, y);
         window.draw(SpriteBotonMenu);
 
-        /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            if(y=360) {
+
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            if(y==360) {
                 SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
                 SpriteBotonMenu.setPosition(x, y+=200);
             };
-            if(y=460) {
+            /*if(y==460) {
                 SpriteBotonMenu.setTextureRect(sf::IntRect(385,0,380,70));
                 SpriteBotonMenu.setPosition(x, y-=100);
-            };
-            if(y=560) {
+            };*/
+            /*if(y==560) {
                 SpriteBotonMenu.setTextureRect(sf::IntRect(385,75,380,70));
                 SpriteBotonMenu.setPosition(x, y-=100);
-            };
+            };*/
             window.draw(SpriteBotonMenu);
         }
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            if(y=360) {
+        /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+            if(y==360) {
                 SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
                 SpriteBotonMenu.setPosition(x, y-=200);
             };
-            if(y=460) {
+            if(y==460) {
                 SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
                 SpriteBotonMenu.setPosition(x, y-=200);
             };
-            if(y=560) {
+            if(y==560) {
                 SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
                 SpriteBotonMenu.setPosition(x, y-=200);
             };
             window.draw(SpriteBotonMenu);
-        }
+        }*/
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
 
-        }*/
+        }
 
         window.display();
 
@@ -128,3 +147,7 @@ int Juego::menu() {
 
 }
 
+void Juego::GenerarZombies() {
+    Zombie zombie;
+    listaZombies.push_back(zombie);
+}

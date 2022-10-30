@@ -4,8 +4,10 @@
 #include "Androide.h"
 #include "Zombi.h"
 #include "Menu.h"
+#include <list>
 
-class Juego {
+
+class Juego{
 private:
     sf::RenderWindow window;
     sf::Texture TexturaMenu, TexturaBotonMenu;
@@ -13,7 +15,8 @@ private:
     sf::Texture TexturaBackground, TexturaBackgroundEfecto;
     sf::Sprite SpriteBackground, SpriteBackgroundEfecto;
     Androide _Protagonista;
-    Zombie zombie;
+    std::list <Zombie> listaZombies;
+    float _frame;
 
 public:
     Juego();
@@ -22,6 +25,7 @@ public:
     void init();
     void update();
     void draw();
+    void GenerarZombies();
 };
 
 #endif // JUEGO_H_INCLUDED

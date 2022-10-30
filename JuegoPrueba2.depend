@@ -1292,10 +1292,10 @@
 	"Zombi.h"
 	<time.h>
 
-1666763695 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.cpp
+1667002833 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.cpp
 	"Androide.h"
 
-1666763328 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.h
+1666998443 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Colisionable.h"
@@ -1712,28 +1712,29 @@
 1666763328 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\personaje.h
 	<SFML/Graphics.hpp>
 
-1666909708 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.cpp
+1667149383 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.cpp
 	"Juego.h"
 
-1666896208 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.h
+1667145641 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.h
 	<SFML/Graphics.hpp>
 	"Androide.h"
 	"Zombi.h"
 	"Menu.h"
+	<list>
 
 1666762961 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Colisionable.h"
 
-1666909708 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\main.cpp
+1667143690 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\main.cpp
 	<SFML/Graphics.hpp>
 	"Androide.h"
 	"Juego.h"
 
 1666228261 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\personaje.cpp
 
-1666763328 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.cpp
+1667001270 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.cpp
 	"Zombi.h"
 	<time.h>
 
