@@ -55,6 +55,8 @@
 		<Unit filename="Disparo.h" />
 		<Unit filename="Juego.cpp" />
 		<Unit filename="Juego.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="Personaje.cpp" />
 		<Unit filename="Personaje.h" />
 		<Unit filename="Zombi.cpp" />

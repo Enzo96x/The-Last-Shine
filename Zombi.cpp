@@ -2,7 +2,7 @@
 #include<time.h>
 
 
-Zombie::Zombie() {
+void Zombie::init() {
     ZombieTextura.loadFromFile("assets/imagenes/zombie.png");
     ZombieSprite.setTexture(ZombieTextura);
     ZombieSprite.setTextureRect(sf::IntRect(0,0,150,150));

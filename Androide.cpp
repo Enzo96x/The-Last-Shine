@@ -1,7 +1,7 @@
 #include "Androide.h"
 
 Androide::Androide() {
-    AndroideTextura.loadFromFile("assets/imagenes/androide22.png");
+    AndroideTextura.loadFromFile("assets/imagenes/androide.png");
     AndroideSprite.setTexture(AndroideTextura);
     x_coord=440, y_coord=340;
     AndroideSprite.setPosition(x_coord,y_coord);

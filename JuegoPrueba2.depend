@@ -1292,7 +1292,7 @@
 	"Zombi.h"
 	<time.h>
 
-1667002833 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.cpp
+1667407040 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.cpp
 	"Androide.h"
 
 1666998443 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\androide.h
@@ -1712,36 +1712,36 @@
 1666763328 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\personaje.h
 	<SFML/Graphics.hpp>
 
-1667149383 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.cpp
+1667369991 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.cpp
 	"Juego.h"
 
-1667145641 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.h
+1667368919 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\juego.h
 	<SFML/Graphics.hpp>
 	"Androide.h"
 	"Zombi.h"
 	"Menu.h"
-	<list>
 
-1666762961 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.h
+1667192899 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.h
 	<SFML/Graphics.hpp>
 	"Personaje.h"
 	"Colisionable.h"
 
-1667143690 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\main.cpp
+1667369748 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\main.cpp
 	<SFML/Graphics.hpp>
-	"Androide.h"
 	"Juego.h"
 
 1666228261 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\personaje.cpp
 
-1667001270 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.cpp
+1667192762 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\zombi.cpp
 	"Zombi.h"
 	<time.h>
 
-1666664428 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\menu.cpp
+1667432363 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\menu.cpp
 	"Menu.h"
 
-1666665454 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\menu.h
+1667408811 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\menu.h
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 
 1666763214 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\disparo.h
 	<SFML/Graphics.hpp>
@@ -1755,4 +1755,108 @@
 
 1666762620 source:c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\colisionable.cpp
 	"Colisionable.h"
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<algorithm>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Mutex.hpp>
+	<cstdlib>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Vector3.hpp>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\alresource.hpp
+	<SFML/Audio/Export.hpp>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<string>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<string>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+	<vector>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundfilefactory.inl
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1525812018 c:\users\enzo\desktop\segundo cuatrimestre\guia 1\juegoprueba2\sfml\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
 

@@ -12,8 +12,10 @@ private:
     int _direccion;
     int _posicion;
 
+
 public:
-    Zombie();
+    bool muerto=true;
+    void init();
     void Update();
     void draw(sf::RenderTarget& target,sf::RenderStates states) const override;
     sf::FloatRect getBounds() const override;

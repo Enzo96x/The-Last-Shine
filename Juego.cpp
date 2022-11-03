@@ -3,17 +3,11 @@
 
 Juego::Juego() {
     init();
-    // menu();
 }
 
 void Juego::init() {
     window.create(sf::VideoMode(1000, 800), "The Last Shine");
     window.setFramerateLimit(30);
-
-    TexturaMenu.loadFromFile("assets/imagenes/menu.png");
-    SpriteMenu.setTexture(TexturaMenu);
-    TexturaBotonMenu.loadFromFile("assets/imagenes/botones.png");
-    SpriteBotonMenu.setTexture(TexturaBotonMenu);
 
     TexturaBackground.loadFromFile("assets/imagenes/background1.png");
     SpriteBackground.setTexture(TexturaBackground);
@@ -21,6 +15,17 @@ void Juego::init() {
     SpriteBackgroundEfecto.setTexture(TexturaBackgroundEfecto);
     SpriteBackgroundEfecto.setOrigin(635,635);
     SpriteBackgroundEfecto.setPosition(500,400);
+
+    for(int x=0; x<10; x++) {
+        ListaZombie[x]=zombie;
+    }
+
+    opcionMenu=menu.abrirMenu(window);
+    switch(opcionMenu){
+case 1:
+    run();
+break;
+    }
 }
 
 void Juego::run() {
@@ -46,19 +51,18 @@ void Juego::draw() {
     window.draw(SpriteBackground);
     window.draw(_Protagonista);
 
-    _frame+=0.2;
-    if(_frame>=10) {
+    _frames+=0.2;
+    if(_frames>=10) {
         GenerarZombies();
-        _frame=0;
+        _frames=0;
     }
 
-    //GenerarZombies();
 
-
-    for (const Zombie& z : listaZombies) {
-        window.draw(z);
+    for(int x=0; x<10; x++) {
+        if(ListaZombie[x].muerto!=true) {
+            window.draw(ListaZombie[x]);
+        }
     }
-
 
     //SpriteBackgroundEfecto.setRotation(SpriteBackgroundEfecto.getRotation()+0.1);
     //window.draw(SpriteBackgroundEfecto);
@@ -68,86 +72,21 @@ void Juego::draw() {
 void Juego::update() {
     _Protagonista.Update();
 
-    for ( Zombie& z : listaZombies) {
-        z.Update();
+    for(int x=0; x<10; x++) {
+        if(ListaZombie[x].muerto!=true) {
+            ListaZombie[x].Update();
+        }
     }
-
 }
 
-int Juego::menu() {
-    int x=50, y=360;
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-        }
-        window.clear();
-
-        window.draw(SpriteMenu);
-
-        /*SpriteBotonMenu.setTextureRect(sf::IntRect(0,0,380,70));
-        SpriteBotonMenu.setPosition(50, 360);
-        window.draw(SpriteBotonMenu);
-
-        SpriteBotonMenu.setTextureRect(sf::IntRect(0,75,380,70));
-        SpriteBotonMenu.setPosition(50, 460);
-        window.draw(SpriteBotonMenu);
-
-        SpriteBotonMenu.setTextureRect(sf::IntRect(0,150,380,70));
-        SpriteBotonMenu.setPosition(50, 560);
-        window.draw(SpriteBotonMenu);*/
-
-        SpriteBotonMenu.setTextureRect(sf::IntRect(385,0,380,70));
-        SpriteBotonMenu.setPosition(x, y);
-        window.draw(SpriteBotonMenu);
-
-
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            if(y==360) {
-                SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
-                SpriteBotonMenu.setPosition(x, y+=200);
-            };
-            /*if(y==460) {
-                SpriteBotonMenu.setTextureRect(sf::IntRect(385,0,380,70));
-                SpriteBotonMenu.setPosition(x, y-=100);
-            };*/
-            /*if(y==560) {
-                SpriteBotonMenu.setTextureRect(sf::IntRect(385,75,380,70));
-                SpriteBotonMenu.setPosition(x, y-=100);
-            };*/
-            window.draw(SpriteBotonMenu);
-        }
-
-        /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            if(y==360) {
-                SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
-                SpriteBotonMenu.setPosition(x, y-=200);
-            };
-            if(y==460) {
-                SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
-                SpriteBotonMenu.setPosition(x, y-=200);
-            };
-            if(y==560) {
-                SpriteBotonMenu.setTextureRect(sf::IntRect(385,150,380,70));
-                SpriteBotonMenu.setPosition(x, y-=200);
-            };
-            window.draw(SpriteBotonMenu);
-        }*/
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
-
-        }
-
-        window.display();
-
-    }
-
-}
 
 void Juego::GenerarZombies() {
-    Zombie zombie;
-    listaZombies.push_back(zombie);
+    for(int x=0; x<10; x++) {
+        if(ListaZombie[x].muerto==true) {
+            ListaZombie[x].init();
+            ListaZombie[x].muerto=false;
+            return;
+        }
+    }
+    return;
 }
