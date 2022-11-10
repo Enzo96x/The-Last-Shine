@@ -5,11 +5,10 @@
 
 int main() {
 
-
 Juego LastShine;
+LastShine.AbrirMenu();
 
-
-    return 0;
+return 0;
 }
 
 

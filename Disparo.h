@@ -8,10 +8,14 @@ class Disparo : public Colisionable, public sf::Drawable {
 private:
     sf::Texture balaTextura;
     sf::Sprite balaSprite;
-
+    int _direccion;
+    sf::Vector2i _coordenadas;
 public:
     Disparo();
-    //void disparar(int x, int y, int direccion);
+    bool activo;
+    void draw(sf::RenderTarget& target,sf::RenderStates states) const override;
+    void setcoordenadas(sf::Vector2i coordenadas, int direccion);
+    void update();
     sf::FloatRect getBounds() const override;
 
 };

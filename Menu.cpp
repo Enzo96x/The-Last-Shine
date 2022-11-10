@@ -6,15 +6,15 @@ Menu::Menu() {
     SpriteMenu.setTexture(TexturaMenu);
     TexturaBotonMenu.loadFromFile("assets/imagenes/botones.png");
     SpriteBotonMenu.setTexture(TexturaBotonMenu);
-    musicaMenu.openFromFile("assets/Musica/MusicaMenu.wav");
-    musicaplay.openFromFile("assets/Musica/Cancion2.wav");
+    //musicaMenu.openFromFile("assets/Musica/MusicaMenu.wav");
+    // musicaplay.openFromFile("assets/Musica/Cancion2.wav");
 }
 
-int Menu::abrirMenu(sf::RenderWindow &window){
-   musicaMenu.play();
+int Menu::abrirMenu(sf::RenderWindow &window) {
+    musicaMenu.play();
     int cursor=360;
     int ejeY=0;
-    int teclaAnimacion;
+    bool espera=false;
     float _frame=0;
 
     while (window.isOpen()) {
@@ -47,57 +47,57 @@ int Menu::abrirMenu(sf::RenderWindow &window){
 
 
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)&&teclaAnimacion!=1) {
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)&&espera==false) {
             if(cursor==360) {
                 cursor=560;
                 ejeY=150;
-                teclaAnimacion=1;
+
             } else {
                 if(cursor==460) {
                     cursor=360;
                     ejeY=0;
-                    teclaAnimacion=1;
+
                 } else {
                     if(cursor==560) {
                         cursor=460;
                         ejeY=75;
-                        teclaAnimacion=1;
+
                     }
                 }
             }
+            espera=true;
         };
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)&&teclaAnimacion!=2) {
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)&&espera==false) {
             if(cursor==360) {
                 cursor=460;
                 ejeY=75;
-                teclaAnimacion=2;
+
             } else {
                 if(cursor==460) {
                     cursor=560;
                     ejeY=150;
-                    teclaAnimacion=2;
+
                 } else {
                     if(cursor==560) {
                         cursor=360;
                         ejeY=0;
-                        teclaAnimacion=2;
+
                     }
                 }
             }
+            espera=true;
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
             if(cursor==360) {
                 musicaMenu.stop();
                 musicaplay.play();
                 return 1;
-                if(cursor==460) {
-
-                    return 2;
-                }
+            }
+            if(cursor==460) {
+                return 2;
             }
             if(cursor==560) {
-
                 return 3;
             }
         }
@@ -105,14 +105,14 @@ int Menu::abrirMenu(sf::RenderWindow &window){
         _frame+=0.25;
         if(_frame>=3) {
             _frame=0;
-            teclaAnimacion=0;
+            espera=false;
         }
 
-    window.draw(SpriteBotonMenu);
+        window.draw(SpriteBotonMenu);
         window.display();
 
     }
 
-    }
+}
 
 

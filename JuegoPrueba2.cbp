@@ -59,6 +59,8 @@
 		<Unit filename="Menu.h" />
 		<Unit filename="Personaje.cpp" />
 		<Unit filename="Personaje.h" />
+		<Unit filename="Tutorial.cpp" />
+		<Unit filename="Tutorial.h" />
 		<Unit filename="Zombi.cpp" />
 		<Unit filename="Zombi.h" />
 		<Unit filename="main.cpp" />

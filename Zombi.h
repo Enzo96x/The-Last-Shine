@@ -10,11 +10,13 @@ private:
     sf::Texture ZombieTextura;
     sf::Sprite ZombieSprite;
     int _direccion;
-    int _posicion;
-
+    bool reiniciarframe;
 
 public:
+    Zombie();
     bool muerto=true;
+    bool golpeado;
+    bool ataco;
     void init();
     void Update();
     void draw(sf::RenderTarget& target,sf::RenderStates states) const override;
